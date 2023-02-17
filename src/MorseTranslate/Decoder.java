@@ -2,12 +2,9 @@ package MorseTranslate;
 
 import java.util.Scanner;
 
-public class decryptMain {
+public class Decoder {
 
-    //  static boolean kewl = false;
-    //  static engToMorse eTM = new engToMorse();
-    //  static morseToEng mTE = new morseToEng();
-    static morseHash mH = new morseHash();
+    static DecoderLogic mH = new DecoderLogic();
     static boolean language = true;
 
     public static void main(String[] args) {
@@ -25,16 +22,6 @@ public class decryptMain {
                 (2) - Morse to English
                 (3) - Exit program""");
 
-        //  int number = Integer.parseInt(scan.nextLine());
-        /*
-        if (number == 1) {
-            System.out.println("Please enter text to be translated:");
-            scan.nextLine();
-        } else if (number == 2) {
-            System.out.println("2");
-        } else {
-            System.out.println("Bye bye");
-        } */
         while (language)
             try {
                 numbInput = Integer.parseInt(scan.nextLine());
@@ -78,35 +65,3 @@ public class decryptMain {
         }
     }
 }
-
-/*
-
-
-        System.out.println("Morse translator");
-        System.out.println("\nYou will now get 3 choices");
-        System.out.println("\n1 - English to Morse" + "\n2 - Morse to English" + "\n3 - Exit program");
-
-        switch (Integer.parseInt(scan.nextLine())) {
-            case 1:
-                System.out.println(mH.convertToMorse().get("a"));
-
-               // while (true)
-                input = scan.nextLine();
-                mH.inputWord(input);
-             //   System.out.println(mH.outputWord);
-                break;
-            case 2:
-                System.out.println("Placeholder2");
-                break;
-            case 3:
-                System.out.println("Placeholder3");
-                break;
-            default:
-                System.out.println("Something went wrong. Eligable values 1-3");
-
-        }
-    }
-}
-
-
-*/

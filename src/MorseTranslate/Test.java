@@ -1,19 +1,16 @@
 package MorseTranslate;
 
 
-
-import org.junit.jupiter.api.Test;
-
 import static org.junit.Assert.assertEquals;
 
-public class decryptTest {
+public class Test {
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testConvertOneWordToMorse() {
 
         //Arrange
-        morseHash mH = new morseHash();
+        DecoderLogic mH = new DecoderLogic();
 
         //Act
         String actual = mH.convertToMorse("hej");
@@ -25,11 +22,11 @@ public class decryptTest {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testConvertTwoWordToMorse() {
 
         //Arrange
-        morseHash mH = new morseHash();
+        DecoderLogic mH = new DecoderLogic();
 
         //Act
         String actual = mH.convertToMorse("hej abc");
@@ -41,11 +38,11 @@ public class decryptTest {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testConvertMorseToEnglish() {
 
         //Arrange
-        morseHash mH = new morseHash();
+        DecoderLogic mH = new DecoderLogic();
 
         //Act
         String actual = mH.convertToEnglish("**** * *---");
@@ -57,11 +54,11 @@ public class decryptTest {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testSeparateMorseWords() {
 
         //Arrange
-        morseHash mH = new morseHash();
+        DecoderLogic mH = new DecoderLogic();
 
         //Act
         String actual = mH.convertToEnglish("**** * *--- / *- -*** -*-*");
@@ -73,11 +70,11 @@ public class decryptTest {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testCapsSensitiveEnglishtoMorse() {
 
         //Arrange
-        morseHash mH = new morseHash();
+        DecoderLogic mH = new DecoderLogic();
 
         //Act
         String actual = mH.convertToMorse("HEJ ABC");
@@ -89,11 +86,11 @@ public class decryptTest {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testSmallAndBigLetters() {
 
         //Arrange
-        morseHash mH = new morseHash();
+        DecoderLogic mH = new DecoderLogic();
 
         //Act
         String actual = mH.convertToMorse("HeJ aBc");
