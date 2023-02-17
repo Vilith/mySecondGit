@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Decoder {
 
-    static DecoderLogic mH = new DecoderLogic();
+    static DecoderLogic dL = new DecoderLogic();
     static boolean language = true;
 
     public static void main(String[] args) {
@@ -48,17 +48,17 @@ public class Decoder {
         System.out.println("Enter message to be translated:");
         input = scan.nextLine();
 
-        while (mH.check(input, numbInput)) {
+        while (dL.check(input, numbInput)) {
             System.out.println("Invalid input!");
             input = scan.nextLine();
         }
 
         if (numbInput == 1) {
             System.out.println(input + " in Morsecode is: ");
-            System.out.println(mH.convertToMorse(input).replaceAll("\s", " ").trim());
+            System.out.println(dL.convertToMorse(input).replaceAll("\s", " ").trim());
         } else if (numbInput == 2) {
             System.out.println(input + " in English is: ");
-            System.out.println(mH.convertToEnglish(input));
+            System.out.println(dL.convertToEnglish(input));
         } else {
             System.out.println("Shutting down program!");
             System.exit(0);
