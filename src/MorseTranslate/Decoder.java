@@ -22,7 +22,7 @@ public class Decoder {
                 (2) - Morse to English
                 (3) - Exit program""");
 
-        while (language)
+        while (!language)
             try {
                 numbInput = Integer.parseInt(scan.nextLine());
                 if (numbInput == 1) {
